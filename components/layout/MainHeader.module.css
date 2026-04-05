@@ -1,0 +1,75 @@
+.header {
+    background: #1c1c1c;
+    border-bottom: 1px solid #2e2e2e;
+    padding: 0 2rem;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logoIcon {
+    width: 30px;
+    height: 30px;
+    background: #f0ede8;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoText {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f0ede8;
+    letter-spacing: -0.5px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.badgeAdmin {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 99px;
+    background: #14532d;
+    color: #4ade80;
+    font-weight: 600;
+}
+
+.badgeViewer {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 99px;
+    background: #422006;
+    color: #fb923c;
+    font-weight: 600;
+}
+
+.roleSelect {
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 1px solid #2e2e2e;
+    background: #242424;
+    color: #f0ede8;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.greeting {
+    font-size: 13px;
+    color: #888;
+}
