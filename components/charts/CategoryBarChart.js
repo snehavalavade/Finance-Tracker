@@ -1,3 +1,4 @@
+"use client";
 import {
     Bar,
     BarChart,
@@ -5,7 +6,6 @@ import {
     YAxis,
     Tooltip,
     ResponsiveContainer,
-    Cell,
 } from "recharts";
 import { getCategoryTotals } from "@/lib/utils";
 import classes from "./CategoryBarChart.module.css";
@@ -19,11 +19,14 @@ export default function CategoryBarChart({ transactions }) {
             <ResponsiveContainer width="100%" height={240}>
                 <BarChart data={data} layout="vertical">
                     <XAxis
-                        dataKey="month"
+                        type="number"
                         stroke="#555"
                         tick={{ fill: "#888", fontSize: 12 }}
                     />
                     <YAxis
+                        type="category"
+                        dataKey="category"
+                        width={90}
                         stroke="#555"
                         tick={{ fill: "#888", fontSize: 12 }}
                     />
@@ -35,6 +38,7 @@ export default function CategoryBarChart({ transactions }) {
                         }}
                         labelStyle={{ color: "#f0ede8" }}
                         itemStyle={{ color: "#888" }}
+                        formatter={(value) => `₹${value.toLocaleString()}`}
                     />
                     <Bar
                         dataKey="amount"
